@@ -894,6 +894,7 @@ abstract class Ardent extends Model {
 		$builder->setModel($this)->with($this->with);
 
     return $this->applyGlobalScopes($builder);
+    //testing this
 /*
 		if ($excludeDeleted and $this->softDelete)
 		{
