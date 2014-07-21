@@ -893,10 +893,13 @@ abstract class Ardent extends Model {
 		// while it is constructing and executing various queries against it.
 		$builder->setModel($this)->with($this->with);
 
+    return $this->applyGlobalScopes($builder);
+/*
 		if ($excludeDeleted and $this->softDelete)
 		{
 			$builder->whereNull($this->getQualifiedDeletedAtColumn());
 		}
+*/
 
 		return $builder;
 	}
